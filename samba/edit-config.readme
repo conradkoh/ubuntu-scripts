@@ -1,0 +1,6 @@
+#Add the following to the end of the file
+
+[<folder_name>]
+path = /home/<user_name>/<folder_name>
+valid users = <user_name>
+read only = no
