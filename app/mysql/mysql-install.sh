@@ -1,4 +1,4 @@
-sudo apt-get update
-sudo apt-get install mysql-server
-sudo mysql_secure_installation
-sudo mysql_install_db
+apt-get update
+apt-get install mysql-server -y
+mysql_secure_installation
+mysql_install_db
