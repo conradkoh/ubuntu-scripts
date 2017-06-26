@@ -7,6 +7,8 @@
 [<folder_name>]
 path = /home/<user_name>/<folder_name>
 valid users = <user_name>
+public = yes
+writable = yes
 read only = no
 create mode = 0777 #set the max permissions that files created here can have
 directory mode = 0777 #set the max permissions that directories can have
