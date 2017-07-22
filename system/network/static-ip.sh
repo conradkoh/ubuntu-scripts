@@ -14,7 +14,7 @@ echo "Enter the gateway: "
 read gateway
 sudo cp /etc/network/interfaces /etc/network/interfaces-copy
 echo $'\n'
-echo "auto $ifname"
+echo "auto $ifname" >> $interface_file
 echo "iface $ifname inet static" >> $interface_file
 echo "address $ipadd" >> $interface_file
 echo "netmask 255.255.255.0" >> $interface_file
