@@ -1,9 +1,16 @@
+
+if [ ! -z "$1" ]; then
+	FOLDERNAME="$1"
+else
+	echo "Enter the git folder to generate commit history from: "
+	read FOLDERNAME
+fi
+echo "Generating log from $FOLDERNAME""...";
 BASEDIR=$PWD
-RELEASE_LOG="$BASEDIR"/"releases.txt"
-LOGDIR="$BASEDIR"/"LOGS"
+LOGDIR="$BASEDIR"/"HISTORY_$FOLDERNAME"
+RELEASE_LOG="$LOGDIR"/"releases.txt"
 PREFIX_RELEASE="remotes/origin/release/"
 PREFIX_RELEASE_LENGTH=${#PREFIX_RELEASE}
-FOLDERNAME="vital_portal"
 NULL_IDENITIFIER='.null'
 
 if [ ! -d $LOGDIR ]; then
@@ -49,5 +56,8 @@ do
 	
 	
 done < "$RELEASE_LOG"
+#cleanup
+rm ${RELEASE_LOG}
+
 echo $origin
 cd $BASEDIR;
