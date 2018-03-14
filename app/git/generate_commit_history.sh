@@ -15,7 +15,7 @@ set +e
 cd "$FOLDERNAME";
 
 #Get all releases and log them to the release log
-git branch -a | grep "remotes/origin/release/" > $RELEASE_LOG
+git branch -a --sort=committerdate | grep "remotes/origin/release/" > $RELEASE_LOG
 
 #Input the release log file into the loop and process the releases
 while IFS= read -r release
