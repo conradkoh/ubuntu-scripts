@@ -1,1 +1,1 @@
-/usr/bin/mongod & > /dev/null
+/usr/bin/mongod > /dev/null &
