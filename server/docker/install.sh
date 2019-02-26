@@ -7,3 +7,4 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 #Install
 sudo apt-get update
 sudo apt-get install docker-ce
+#sudo apt install docker.io
